@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .main{
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            padding: 50px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 10px solid red;
+            gap: 20px;
+        }
+        .child.three:hover{
+            cursor: pointer;
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child one"></div>
+        <div class="child two"></div>
+        <div class="child three"></div>
+        <div class="child four"></div>
+        <div class="child five"></div>
+    </div>
+</body>
+</html>
