@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<style>
+    #first{
+         padding: 10px;
+         display: flex;
+         justify-content: space-around;
+         background-color: rgb(61, 56, 56);
+    }
+    #first > a{
+        color: white;
+        text-decoration: none;
+    }   
+    #second > div{
+        display: flex;
+        align-items: center;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        gap: 25px;
+        padding: 25px;
+        margin: 25px;
+        background-color: white;
+    } 
+    div > ul > h2{
+        margin-left: 40%;
+    } 
+    div > ul{
+        margin-left: 300px;
+    } 
+    @media all and (min-width : 320px) and (max-width : 750px) {
+        #second > div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        background-color: white;
+        margin: auto;
+        }
+        div > ul > h2{
+        margin: auto;
+    } 
+    div > ul{
+        margin: auto;
+    } 
+}
+</style>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: aqua;text-align: center;background-color: black;padding: 20px;">My Portfolio</h1>
+    <div style="background-color: rgb(236, 218, 218)">
+    <div id="first">
+   <a href="home">Home</a>
+   <a href="education">Education</a>
+   <a href="projects">Projects</a>
+   <a href="skills">Skills</a>
+   <a href="contact me">Contact Me</a>
+</div>
+<div id="second">
+    <div>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABKAGIDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAEEBQMCBv/EACYQAQACAQMEAQQDAAAAAAAAAAABAgMEEUESITFRBRQikaEyYcH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+zAAAABWzauuK3TEdUx5BZFTHrq2ttevTvytAkAAAAAAABCUAi87UtMcQx5neZmWzMbxtLLz4LYrzvH28SDi1dNabaekz52ZuPFbLbasb/41cdIx0rWOIB6ShIAAAAAACEuGsvNNPbbzPYHPNrYrPTjjqn3PhXnWZp5j8K4CxGryxzH4dcWu77ZY7e4UgG1ExaImJ3iUqfx996WrPErgAAAAAACrromcPbie60gGKNO+jxXnfbpn+nKdBHF/0CiLv0HvJ+nSmhxx/KZsDn8fE/fPHZeRWsVjasRER6SAAAAAAAAAAAAAAAAAAD//2Q==">
+        <ul>
+        <h2 style="color: green;">Home</h2>
+        <p>This is a dummy description for Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </ul>
+    </div>
+    <div>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABaAIEDASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAMEAgEFBv/EADwQAAICAQEEBQkFBwUAAAAAAAECAAMRBBIhMaEFE0FSgRQiMkNRYXHB0RUjkZOxM0JEYpLh8VNzwtLw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABoRAQADAQEBAAAAAAAAAAAAAAABAhEhMUH/2gAMAwEAAhEDEQA/APs4Qk+ruNSALuZu2BRCeRkk5JyZoSj1YTzBNiQehCQiaECyEkmhAphJ4QKIRE2jHODAZCEIBCEIBIukPV+Pylsi6Q9X4/KBKJsTAmhKjpYIMscSW25RqUB2Cjjzj7vjMP1lxZBaqghgRjiIV6YjqiGR9kEAd6c7Tbch0rFfqyu1E20FbrsHtHH4e2aXUKQeA4787pOlmSarRUjjBCrZtMPCOVFqwxZF9mcAEzbDg1LMRsEEdpYYmxZdU9j3PWav3AvEfGQa4azyoNVqkrr3EKXwDyleGFdnXVs6nGAu/O7snOZtuRAqovW9SydhwY6RaMstTLXpzUAdwbt98pTrM5bGPZN13OrOfDJpPSEzNJ6QlQ2EIQCEIQCRdIer8flLZF0j6vx+UCUQLqg3zgmbGAwCAc7t5xKgC1oNta8k+6FDsRl0CkHcvD/MLH2GCnh7MxmK3dVbBdd4EkrqOvQI2uF5c+aSwyrDw37pc9VFxTJB37sTlhsLlVViCOIxiZBxu2XJXJG4/wCJK1ivha0z66+0LFRVatAd25cHnmFylWAV12ic+dvGIp6LdUyutj0snaycRKH0+0gHWHIHHG8yjaVNsLiwrgcP/GPQELhm2j7cYkemt67zQdkIN/v5ynrEUKCw38PfCZhs0npCYmq/TEKdCEIBCEIBIekfV+Pyl0h6S9V4/KBIDF6rSX2mtq1yAD2j3Tagk4AzE6zTq4zYHJ9gwP1EqO3JqaDY9xwGGygXJBPZFVXPpa1Vqy2d+QcSMLqaj9x5SgH+nZnlnHKM+0rwor1aixR2Woa2/EbuUirxqUsvrKEnIycMPNlVd9TrtK4xw37p51PU37tMdlmXGw587wI3GP1OmNGlRQpZgc5EDba3q7yudoDsA4CF+tFdwWtlOfSzkyWzTupW60KgIwS7YmlepQrrpbL3H7x8xee/lA3QyV22izIXG/d75dp7KXBFJyAd/GeYdU5ck1aZM8QzMx+Ut09yOMGoZznNaNj9IFuZqo/eCLzmbq/aCBTCEIBCEIBJtWcbHjKZNrULIpGd3sgJKWPXlNxPDM827ozU2kkmvwrB/Uy0m0+vsHwC/SYKWt/FXD4FfpJ1XnHoa8+kxYf7a/WbXo/VVjCBh44/5ys0WHjrNT/Uv0mDomPHWar8z+0dE46Ptzlqt+c5GB+kq+1K6LK9JfYDqWHmg9vxij0aG46zWfnRLdAaKyzrLBY9nfZ98dDr9Pfa+0xsJ/lBHPj+EnboxmbLUBj7W4/iQZQOjQDu1ms/OmxoWHDWav8AM/tHRGej7OHkwPif+s7XoLK2DLpiD/KuT+JxLhpbBw1mp/qH0jFptH8Xefjs/SOh2msu2ALK2GO08ZRU4ZwJKBYPX2H47P0j9Mh6zaJJxxJhFcIQlBCEIBDjCEBR09RPoc4eT1d3mY2EBXk9Xd5mHk9Xd5mNhAV5PV3eZh5PV3eZjYQFeT1d3mZ3qK+7zMZCAvqK+7zh1Ffd5xkIC+pr7vObACjAGBOwgEIQgEIQgf/Z">
+        <ul>
+        <h2 style="color: red;">Education</h2>
+        <p>This is a dummy description for Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </ul>
+    </div>
+    <div>
+        <img src="data:image/jpeg;base64,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">
+        <ul>
+        <h2 style="color: orange;">Projects</h2>
+        <p>This is a dummy description for Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </ul>
+    </div>
+    <div>
+        <img src="data:image/jpeg;base64,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">
+        <ul>
+        <h2 style="color: purple;">Home</h2>
+        <p>This is a dummy description for Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </ul>
+    </div>
+    <div>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABwAHwDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQBAgMFBv/EAC0QAAICAgAEBQMDBQAAAAAAAAECAAMEERIhMUEFEyJRYRQykVJxgSMkM0Lw/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAIhEAAgMAAQQCAwAAAAAAAAAAAAECAxESBCExQRNRIjJx/9oADAMBAAIRAxEAPwD2cIQgAQhCABCRDcAJhEs7P+k4dJxFvnU0oza7ag+9b7RHOK8sfhLOWdhmEXOUnYEyjZZ7KP5lUupqXsFCQ1uAiJyLD31+0axmLVAk7MKuojbLEEoOK7msIQmgQIQhAAlWcL1IEtFsgeoGVWzcI6iYrXhob0Hfcocn2WYQnPl1Vj8FqgjRshz00Jm1jn/YyISl2zl5Y6ikcjxG9ymzzHaTiZ4tRUA0QNajWVhpds60TFsfw8U2FveTZOM0aG04rB5G2JeVVdCW1MxWEbwz6WEV1NsU6s17iaelllqK7O8R2EgSZ2jMEIQgATG8ejftNpS0brMrtjyg0SnjE4SYjfkvZe1NLcIXkSBsk+046jpo0dkRWnzccOci3irHPibXKTX4hjWWCtbCGb7eJSOL9twcH6DRnUqVmDeIYyM4e0KUOjsdJhneILRdSqPyJ23pJ2Ne8FXJvMDkPahF3zaqyvHxANr1cJ0Ny12VTTrjbmRsAAk/gRHCX0NqNZatuGxT8zmXeJ1rk1KjngKksOA8+mu3zOhva7EeKdck2Q2msOmJMpU3HWre4l53DKEIQgASDzEmQYMBMjmROVYj4ee9xRnpsOyVGypnXsGnMoQCNEbnHf4yaL/KOZnWnLx/7UMxrdXZWUrxAdhuLOfqkqC0shRgzM+t7HYCdkVIDsKNyeBQd8I3JU0vCJw4oQg5LXIxPMga5nkBBqnGLTYUZxVyYDqOU7RRd70NyFRVGlHKHyhxOB4nYxosUpYqDRUggKRy5nvNanamwNajNVYBpkGzyHT/AL3nYNSFdFRqQtKKnAF9PzIdqzMDiczLrQW05CVs1eiGAHNd61ynSQKFHD0lhWoGgBqAUAaHISmUtSHSGsJt1Ff0nUZiOI3Dey/qGxHp2aZcoJmaSxhCEJaKEIQgAvePVuZTe4bAMx1OVfHLGXRfYrMM2xqsO6xDplQkH5jGop4iGOOqqpYF14tdhvZ3+JVFa1ozYti57NhN5n+av0H5bpDwzMZ8ZvqHG69hmPfnMxgWLkJfWfQ49S/PvF7MaxWvqWpiBZxAdOIS7jF6hdZ16cqm92StjxL1BBE21OZgU0FwyK9bjrxKRudXUonFJ9h0ysiWIkaleDGZby763+dGdMHY3OXkr/RJ7rzjuJaLKVO+06fSS2GFNi76MQhCbCoIQhAClg9Bi8ZYbUxac/qlkkyyASCARo9JMiZNHAAAaEjhG965wLAdSBKG5B1YSP4ST5aA7CjcmZNk1jps/wAShyiftT8xuEn6JGJEWN1zdABKlbn6uRGVE2GoZfRUhiACNc5h4bcVJQnoZmcNn+4kxjFxfLM20VOvdKpNM6YOxJlUGllprKwhCEAIMz8ob6zWESVcZ/sSngrYhX7Ys62E/cZ0Su5Q1CVfDH6GUjm+QT13LDG+J0RWJIQRlWkHMRXGHtNVxgO0a4RJ1HUURyYuKB7S4pE2hGwjTMVgdpYIBLQkkBCEIAf/2Q==">
+        <ul>
+        <h2 style="color: blue;">Contact Us</h2>
+        <p>This is a dummy description for Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </ul>
+    </div>          
+</div>
+</div>
+</body>
+</html>
