@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .valid { color: green; }
+        .invalid { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Password Validation</h2>
+    <button onclick="validatePassword()">Enter Password</button>
+    <p id="result"></p>
+
+    <script>
+        function validatePassword() {
+            let password;
+            const result = document.getElementById('result');
+
+            const lengthCriteria = /.{8,}/; // Minimum 8 characters
+            const upperCaseCriteria = /[A-Z]/; // At least one uppercase letter
+            const lowerCaseCriteria = /[a-z]/; // At least one lowercase letter
+            const numberCriteria = /\d/; // At least one number
+            const specialCharCriteria = /[!@#$%^&*(),.?":{}|<>]/; // At least one special character
+
+            do {
+                password = prompt("Please enter your password:");
+                
+                if (
+                    lengthCriteria.test(password) &&
+                    upperCaseCriteria.test(password) &&
+                    lowerCaseCriteria.test(password) &&
+                    numberCriteria.test(password) &&
+                    specialCharCriteria.test(password)
+                ) {
+                    result.textContent = "Password is valid!";
+                    result.className = "valid";
+                    break; // Exit the loop if the password is valid
+                } else {
+                    result.textContent = "Invalid password. It must be at least 8 characters long, and include uppercase letters, lowercase letters, numbers, and special characters.";
+                    result.className = "invalid";
+                    break;
+                }
+            } while (!(
+                lengthCriteria.test(password) &&
+                upperCaseCriteria.test(password) &&
+                lowerCaseCriteria.test(password) &&
+                numberCriteria.test(password) &&
+                specialCharCriteria.test(password)
+            ));
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <p>I've chosen a number between 1 and 100. Can you guess it?</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button id="submitGuess">Submit Guess</button>
+    <p id="feedback"></p>
+    <p id="attempts" class="hidden"></p>
+    
+    <script>
+        // Generate a random number between 1 and 100
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        let guess;
+
+        document.getElementById('submitGuess').addEventListener('click', function() {
+            guess = parseInt(document.getElementById('guessInput').value);
+            attempts++;
+
+            // Provide feedback based on the guess
+            if (guess < randomNumber) {
+                document.getElementById('feedback').textContent = "Too low! Try again.";
+            } else if (guess > randomNumber) {
+                document.getElementById('feedback').textContent = "Too high! Try again.";
+            } else {
+                document.getElementById('feedback').textContent = `Congratulations! You've guessed the number ${randomNumber} in ${attempts} attempts.`;
+                document.getElementById('attempts').textContent = `Total attempts: ${attempts}`;
+                document.getElementById('attempts').classList.remove('hidden');
+                document.getElementById('guessInput').disabled = true; // Disable input after correct guess
+            }
+
+            // Clear the input field for the next guess
+            document.getElementById('guessInput').value = '';
+            document.getElementById('guessInput').focus();
+        });
+    </script>
+</body>
+</html>
